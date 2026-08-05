@@ -1,11 +1,10 @@
 
 import './App.css'
-import {Todo} from "./components/todo/Todo.tsx";
-
+import {Todos} from "./components/todos/Todos.tsx";
 function App() {
   return (
     <>
-        <Todo/>.
+        <Todos/>.
 
 
     </>

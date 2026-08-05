@@ -5,10 +5,9 @@ import {loadTodos} from "../../service/api.servise.ts";
 import {Todo} from "../todo/Todo.tsx";
 export const Todos = () => {
     const [todos,setTodos]=useState<TodoModelType[]>([]);
-    useEffect(()=>{loadTodos().then(value => setTodos(value));}
-    )
+    useEffect(()=>{loadTodos().then(value => setTodos(value))},[])
     return (
-        <div>
+        <div className={'color-beck'}>
             {todos.map(todo=><Todo todo={todo} key={todo.id}/>)}
         </div>
     );
