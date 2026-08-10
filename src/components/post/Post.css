@@ -1,0 +1,13 @@
+.tag{
+    background: darkslategrey;
+    color: yellow;
+}
+.like{
+    font-size: 50px;
+    color: white;
+    background: deeppink;
+}
+.dis-like{
+    color: black;
+    background: lightskyblue;
+}
