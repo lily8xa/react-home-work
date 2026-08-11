@@ -1,0 +1,23 @@
+
+.main-border{
+    width:70%;
+    border: 3px solid #0d0d32;
+    margin: 20px;
+    padding: 40px;
+    gap: 20px;
+    box-shadow: 2px 2px 2px #0d0d32;
+    list-style-type: none;
+    font-size: 2vh;
+    background: #d3e3ef;
+}
+li{
+    list-style-type: none;
+    text-shadow: 0 0 2px #0d0d32;
+}
+h1,h3{
+    text-shadow: #d3e3ef 3px 1px 1px;
+}
+img{
+    box-shadow: 2px 2px 2px 3px rgba(13, 13, 50, 0.62);
+    margin: 20px;
+}

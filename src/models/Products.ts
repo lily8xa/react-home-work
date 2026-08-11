@@ -40,3 +40,9 @@ export type ProductsType={
     images:string[];
     thumbnail:string;
 }
+export type JsonProductsType={
+    products:ProductsType[]
+    total:number;
+    skip:number;
+    limit:number;
+}
