@@ -1,6 +1,6 @@
 
 export type UserDummyJsonType={
-    users:UserDummyType;
+    users:UserDummyType[];
     total:number;
     skip:number;
     limit:number;
@@ -20,7 +20,7 @@ export interface bankItem {
 
 export interface addressItem {
 	country: string;
-	address: addressItem;
+	address: string;
 	city: string;
 	postalCode: string;
 	coordinates: coordinatesItem;

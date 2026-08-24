@@ -1,9 +1,10 @@
 import type {FC} from "react";
 import type {UserType} from "../../models/UserType.ts";
+import './User.css'
 
 export const User:FC<UserType> = ({id,name,username,email,address,phone,website,company}) => {
     return (
-        <div>
+        <div className={'user-main'}>
             <h1>{id} {name} {username}</h1>
             <p>email-{email}</p>
             <p>{address.city}, {address.street}, {address.suite}, {address.zipcode},

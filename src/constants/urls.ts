@@ -16,9 +16,9 @@ export const dummyUrls={
         allDummyUsers:dummyBaseUrl+'/users'
     },
     dummyPosts:{
-        allDummyPosts:baseUrls+'/posts'
+        allDummyPosts:dummyBaseUrl+'/posts'
     },
     dummyComments:{
-        allDummyComments:baseUrls+'/comments'
+        allDummyComments:dummyBaseUrl+'/comments'
     }
 }
