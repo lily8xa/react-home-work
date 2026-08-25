@@ -1,4 +1,4 @@
-import {Manu} from "../component/Manu.tsx";
+import {Manu} from "../component/manu/Manu.tsx";
 import {Outlet} from "react-router";
 
 export const MainLayout = () => {
