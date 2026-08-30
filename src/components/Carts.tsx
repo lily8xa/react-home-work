@@ -2,7 +2,7 @@ import {useParams} from "react-router";
 import {useEffect, useState} from "react";
 import type {CartType} from "../models/CartType.ts";
 import {cartService} from "../services/api.service.ts";
-import {Cart} from "../component/Cart.tsx";
+import {Cart} from "../component/cart/Cart.tsx";
 
 export const Carts = () => {
     const{id}=useParams();
