@@ -17,3 +17,9 @@ export type CartType={
     totalProducts:number,
     totalQuantity:number,
 }
+export type DummyCartType={
+    carts:CartType[];
+    total:number;
+    skip:number;
+    limit:number;
+}

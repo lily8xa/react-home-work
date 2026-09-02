@@ -1,0 +1,12 @@
+.main-user{
+    background: rgba(0, 255, 255, 0.56);
+    border:aliceblue 3px solid ;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+    font-size: 40px;
+    padding: 30px;
+    margin: 40px;
+}
+a:hover{
+    font-size: 43px;
+    text-shadow: rgb(255, 255, 255) 0 19px 38px, rgb(20, 20, 97) 0 15px 12px;
+}

@@ -1,0 +1,15 @@
+.main-cart{
+    font-size: 40px;
+    padding: 30px;
+    margin: 40px;
+    background: rgba(0, 255, 255, 0.56);
+    border:aliceblue 3px solid ;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+}
+.one-cart{
+    padding: 20px;
+    margin: 40px;
+    border:aliceblue 3px solid ;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+    background: rgba(146, 205, 236, 0.65);
+}

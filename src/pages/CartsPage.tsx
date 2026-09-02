@@ -1,7 +1,7 @@
-import {Users} from "../components/users/Users.tsx";
+import {Carts} from "../components/carts/Carts.tsx";
 
 export const CartsPage = () => {
     return (
-        <><Users/></>
+        <><Carts/></>
     );
 };

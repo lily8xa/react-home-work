@@ -11,7 +11,7 @@ export const Carts = () => {
     useEffect(() => {
         if(id){
             cartService.getAllCartsOfUsers(id)
-                .then(value => setCarts(value))
+                .then(value => setCarts(value.carts))
             }}, [id]);
 
     return (
