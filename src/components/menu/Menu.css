@@ -1,0 +1,11 @@
+.main-menu{
+    background: mediumseagreen;
+    font-size: 40px;
+    padding: 30px;
+    margin: 20px;
+
+}
+a:hover{
+    transform: scale(1.075);
+    text-shadow: rgb(255, 255, 255) 0 19px 38px, rgb(45, 66, 23) 0 15px 12px;
+}

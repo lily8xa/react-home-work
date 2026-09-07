@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import type {UserType} from "../../models/UserType.ts";
 import {useSearchParams} from "react-router";
 import {getUsers} from "../../services/api.service.ts";
+import {User} from "../user/User.tsx";
 
 export const Users = () => {
     const [users,setUsers]=useState<UserType[]>([]);
@@ -11,6 +12,6 @@ export const Users = () => {
             .then(value => setUsers(value.users))
     },[searchParam])
     return (
-        <></>
+        <div>{users.map(user => <User key={user.id} {...user}/>)}</div>
     );
 };
