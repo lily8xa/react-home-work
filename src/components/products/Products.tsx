@@ -9,7 +9,7 @@ export const Products = () => {
     const [query]=useSearchParams();
     useEffect(() => {
         getProducts(query.get('page') || '1')
-            .then(value => setProducts(value.product))
+            .then(value =>setProducts(value.products))
     }, [query]);
     return (
         <div>{products.map(product=><Product key={product.id} {...product}/>)}</div>

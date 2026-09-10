@@ -1,0 +1,13 @@
+.main-manu{
+    background: rgba(191, 4, 191, 0.83);
+    font-size: 40px;
+    padding: 20px 90px;
+    box-sizing: border-box;
+    margin: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+a:hover{
+    font-size: 42px;
+    color: #035757;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+}

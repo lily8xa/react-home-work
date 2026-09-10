@@ -33,7 +33,7 @@ export type ProductType= {
 	dimensions: dimensionsItem;
 }
 export type ProductResponseType={
-    product:ProductType[];
+    products:ProductType[];
     total:number;
     skip:number;
     limit:number;
