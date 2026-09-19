@@ -1,0 +1,21 @@
+.main-form{
+    box-sizing: border-box;
+    background: rgba(14, 188, 188, 0.75);
+    font-size: 30px;
+    height: 700px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.submit{
+    font-size: 40px;
+    border-radius: 30px;
+    padding: 10px;
+}
+input{
+    height: 40px;
+    font-size: 30px;
+    margin: 20px;
+}
