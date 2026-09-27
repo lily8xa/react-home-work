@@ -12,9 +12,12 @@ export const CarForm = ({onSubmit}:CarFormProps)=> {
     const handleFormSubmit = async (data: CarType) => {
         try {
             await onSubmit(data);
-            reset();
+
         } catch (error) {
             console.error("Помилка відправки форми:", error);
+            if(!error){
+                reset();
+            }
         }
     };
     return (
