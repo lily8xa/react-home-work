@@ -1,5 +1,6 @@
 import {login, type LoginDataType} from "../../service/services.ts";
 import {useForm} from "react-hook-form";
+import './LoginForm.css'
 
 
 export const LoginForm = () => {
@@ -23,8 +24,8 @@ export const LoginForm = () => {
         }
     };
     return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={'main-menu'}>
+            <form className={'main-form'} onSubmit={handleSubmit(onSubmit)}>
                 <label>Enter user name
                     <input type="text"{...register('username',{ required: true }) }/>
                 </label>

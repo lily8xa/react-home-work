@@ -1,0 +1,22 @@
+.main-login{
+    height: 70px;
+    width:80px;
+}
+.main-form{
+    font-size: 30px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+input{
+    margin: 10px;
+}
+button{
+    height: 70px;
+    width: 100px;
+    border: black solid;
+    color: white;
+    background: black;
+}
