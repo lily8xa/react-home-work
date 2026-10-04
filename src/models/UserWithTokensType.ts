@@ -1,4 +1,4 @@
-export type UserWithTokensType ={
+export type UserWithTokensType ={//// тип який отримуємо коли авторизація успішна.
     firstName: string;
 	lastName: string;
 	image: string;

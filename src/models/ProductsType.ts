@@ -12,7 +12,7 @@ export interface dimensionsItem {
     height: number;
 }
 
-export type ProductType= {
+export type ProductType= {////типізація продукту, для можливості використовувати дані
     thumbnail: string;
     minimumOrderQuantity: number;
     rating: number;
