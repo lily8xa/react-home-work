@@ -7,6 +7,8 @@ export const Users = () => {
     console.log('users');
 
     const [users, setUsers] = useState<UserType[]>([]);
+    const [counter,setCounter]=useState<number>(0)
+
 
 
 
@@ -26,8 +28,9 @@ export const Users = () => {
 
     return (
         <div>users component
-           <div>{users.map(user=><User key={user.id} {...user} />)}</div>
-
+           <div>{users.map(user=><User key={user.id} id={user.id} name={user.name} email={user.email} phone={user.phone}/>)}</div>
+<button onClick={() => setCounter(counter + 1)}>
+    Click me {counter}</button>
         </div>
     );
 };
