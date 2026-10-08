@@ -18,13 +18,13 @@ export interface companyItem {
 }
 
 export type UserType ={
-	website: string;
-	address: addressItem;
+	// website: string;
+	// address: addressItem;
 	phone: string;
 	name: string;
-	company: companyItem;
+	// company: companyItem;
 	id: number;
 	email: string;
-	username: string;
+	// username: string;
 }
 

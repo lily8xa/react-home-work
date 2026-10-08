@@ -6,18 +6,14 @@ import type {UserType} from "../../models/UserType.ts";
 export const Users = () => {
     console.log('users');
 
-    const [users, setUsers] = useState<UserType[]>([]);
-    const [counter,setCounter]=useState<number>(0)
+    const [users, setUsers] = useState<UserType[]>([]);////отримати користувачів і використати їх
+    const [counter,setCounter]=useState<number>(0)////отримати значення(задане в стан)і змінювати його
 
-
-
-
-
-    useEffect(() => {
+    useEffect(() => {////доступ до масиву з користувачами
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(value => value.json())
             .then(value => {
-                setUsers(value);
+                setUsers(value);///доступ до данних
             });
 
         return () => {
