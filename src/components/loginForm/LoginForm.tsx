@@ -3,22 +3,22 @@ import {useForm} from "react-hook-form";
 import './LoginForm.css'
 
 
-export const LoginForm = () => {
+export const LoginForm = () => {//створюємо форму
 
-    const { register, handleSubmit } = useForm<LoginDataType>();
+    const { register, handleSubmit } = useForm<LoginDataType>();///реєстрація і відправка форми
 
-    const onSubmit = async (data: LoginDataType) => {
+    const onSubmit = async (data: LoginDataType) => {////що передаємо при відправці
         try {
             // Передаємо дані у функцію login, яка тепер лежить у services.ts
             const userWithTokens = await login({
-                username: data.username,
-                password: data.password,
-                expiresInMins: 1,
+                username: data.username,////у логін передаємо дані з поля юзернейм
+                password: data.password,///з поля пароль
+                expiresInMins: 1,///діють хв
             });
 
-            alert("Успішний вхід!");
+            alert("Успішний вхід!");///сповіщення якщо все гуд
             console.log("Отримано користувача:", userWithTokens);
-        } catch (error) {
+        } catch (error) {////якщо не знайдено користувача
             console.error("Помилка авторизації:", error);
             alert("Невірний логін або пароль");
         }
