@@ -3,4 +3,7 @@
     font-size: 30px;
     padding: 20px;
     margin: 20px;
+    height: 350px;
+    width: 450px;
+    box-sizing: border-box;
 }

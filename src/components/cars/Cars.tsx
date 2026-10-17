@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import type {CarType} from "../../models/CarType.ts";
 import {getCars} from "../../services/api.service.ts";
 import {Car} from "../car/Car.tsx";
+import './Cars.css'
 
 export const Cars = () => {
     const[cars,setCars]=useState<CarType[]>([])
@@ -10,6 +11,6 @@ export const Cars = () => {
             .then(value => setCars(value))
     },[])
     return (
-        <>{cars.map(car =><Car {...car} key={car.id}/> )}</>
+        <div className={'main-cars'}>{cars.map(car =><Car {...car} key={car.id}/> )}</div>
     );
 };
