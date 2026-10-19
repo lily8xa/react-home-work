@@ -1,5 +1,5 @@
 import {useDispatch} from "react-redux";
-import type {store} from "../redux/slices/Store.ts";
+import type {store} from "../redux/Store.ts";
 ////створюємо власний хук для типізації
 export const useAppDispatch = useDispatch.withTypes<typeof store.dispatch>()
 

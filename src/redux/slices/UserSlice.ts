@@ -5,14 +5,14 @@ type UserSliceType={
     users:UserType[];
 }
 const initialUserSliceState:UserSliceType={users:[]}
-const loadUsers=createAsyncThunk(
+export const loadUsers = createAsyncThunk<UserType[]>(
 'userSlice,loadUsers',
     async (_,thuncAPI)=>{
     try{
         const users=await getAll<UserType[]>('/users');
         console.log(users)
 
-        return thuncAPI.fulfillWithValue(users);
+        return users;
 
     }catch (error){
         console.log(error);
@@ -26,10 +26,10 @@ export const userSlice= createSlice({
     initialState:initialUserSliceState,/////початковий стан нашого обєкту
     reducers:{},////метод який впливає на початковий стан-state.  і може його змінювати---action(для синхронних операцій)
     extraReducers://///reducers для асинхронних операцій
-            builder => builder////реєструємо випадок
+           (builder) => builder////реєструємо випадок
                 /////.addCase---нове завдання.loadUsers---функція з посиланням.fulfilled---реалізація відповіді успіх
                 ////state---берем стан,action---вкладаємо відповідь суди з масивом
-        .addCase(loadUsers.fulfilled,(state,action:PayloadAction<UserType[]>)=>{
+        .addCase(loadUsers.fulfilled.type,(state,action:PayloadAction<UserType[]>)=>{
             ////state.users---наша відповідь.action.payload---корисне навантаження яке передається в сховище
             state.users=action.payload
         })////////////////////.rejected ---у випадку помилки завантаження
