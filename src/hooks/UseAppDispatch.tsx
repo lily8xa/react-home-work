@@ -4,6 +4,6 @@ import type {store} from "../redux/Store.ts";
 export const useAppDispatch = useDispatch.withTypes<typeof store.dispatch>()
 
 
-////що тут означає dispatch/В контексті Redux (та Redux Toolkit), який видно на скріншоті,
+////що тут означає dispatch/В контексті Redux (та Redux Toolkit),
 // dispatch — це спеціальна функція, яка використовується для надсилання (відправки) екшенів (actions) до стору (store).Простими словами,
 // це єдиний спосіб в Redux змусити стан (state) вашої програми змінитися.

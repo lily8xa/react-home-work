@@ -4,6 +4,10 @@ import {useEffect} from "react";
 import {postSliceAction} from "../redux/slices/PostSlice.ts";
 import {Post} from "../components/post/Post.tsx";
 
+///////////////////////////
+///////////////////////детальний опис на сторінці UsersPage ідентична цій//////////////////////////
+///////////////////////////
+
 export const PostsPage = () => {
     const {posts}=useAppSelector(({postSlice})=>postSlice)
     console.log(posts)

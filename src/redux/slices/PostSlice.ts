@@ -2,6 +2,11 @@ import type {PostType} from "../../models/PostType.ts";
 import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolkit";
 import {getAll} from "../../services/api.servise.ts";
 
+
+////////////////////////////////
+////////////////////////////////////детальний аналогічний опис в файлі UserSlice.ts///////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
 type PostSliceType={
     posts:PostType[]
 }
@@ -12,7 +17,7 @@ async(_,thuncAPI)=>{
 try{
     const posts=await getAll<PostType[]>('/posts')
     console.log(posts)
-    return posts;
+    return thuncAPI.fulfillWithValue(posts);
 }catch (error){
     console.log(error);
     return thuncAPI.rejectWithValue('some error')

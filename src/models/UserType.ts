@@ -1,4 +1,4 @@
-
+////////////типи полів користувача
 export interface geoItem {
 	lng: string;
 	lat: string;
