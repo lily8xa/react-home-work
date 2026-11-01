@@ -4,13 +4,15 @@ import {getAll} from "../../services/api.servise.ts";
 type UserSliceType={/////////////////тип для дефолтного значення з масивом користувачів
     users:UserType[];
 }
-const initialUserSliceState:UserSliceType={users:[]}///////////////зазаємо дефолтне значення з типом нашим і пустий масив, якщо не завантажено нічого
-//////////функція завантаження данних з хуком createAsyncThunk який обробляє успішне і не успішне завантаження, також підтримує аргумент який можна викорстовуваити для отримання певних данни(_)
-export const loadUsers = createAsyncThunk<UserType[]>(
-'userSlice,loadUsers',
-    async (_,thuncAPI)=>{/////////(_)-аргумент який дає можливість відслідковувати(прик.id:string) і керувати. thuncAPI----------містична штука бо так треба
-    try{
-        const users=await getAll<UserType[]>('/users');////////////використовуємо функцію для торимання данних з АПІ
+const initialUserSliceState:UserSliceType={users:[]}///////////////встановлюємо дефолтне значення з типом нашим і пустий масив, якщо не завантажено нічого
+//////////функція завантаження даних createAsyncThunk який обробляє успішне і не успішне завантаження, також підтримує аргумент який можна використовувати для отримання певних даних(_)
+export const loadUsers = createAsyncThunk<UserType[]>(//////функція Redux Toolkit, яка автоматично керує станом асинхронного запиту. він сам генерує три стани (екшени):
+'userSlice,loadUsers',//Це унікальне ім'я екшену, префікс
+    async (_,thuncAPI)=>{/////////(_)-аргумент який дає можливість відслідковувати(прик.id:string) і керувати. thuncAPI--•об'єкт, який надає доступ до корисних інструментів Redux всередині танка. Завдяки йому ми можемо вручну керувати результатом запиту, викликати інші екшени (thunkAPI.dispatch) або почитати поточний стан сховища (thunkAPI.getState()).
+
+        try{
+        const users=await getAll<UserType[]>('/users');////////////використовуємо функцію для торимання данних з АПІ,
+            ////почекаємо поки відпрацює await
         console.log(users)
 
         return thuncAPI.fulfillWithValue(users);///////////повертаємо успішно виконаний масив юзерів. fulfillWithValue-метод що передає успішні дані
@@ -23,7 +25,7 @@ export const loadUsers = createAsyncThunk<UserType[]>(
 )
 ////створюємо кімнату зі слайсами---createSlice
 export const userSlice= createSlice({//////треба її прописати в Store
-    name:'userSlice',/////довільна назва для пошуку
+    name:'userSlice',/////префікс для типу екшена
     initialState:initialUserSliceState,/////початковий стан нашого обєкту
     reducers:{},////метод який впливає на початковий стан-state.  і може його змінювати---action(для синхронних операцій)
     extraReducers://///reducers для асинхронних операцій

@@ -1,8 +1,8 @@
 export type CommentType ={////типи полів коментаря
-	name: string;
-	postId: number;
-	id: number;
-	body: string;
-	email: string;
+	name: string;////////поле де назва
+	postId: number;////номер до якого поста відноситься коментар
+	id: number;/////номер унукальний до кожного різний
+	body: string;////////вміст коментаря
+	email: string;///////ел-адреса
 }
 

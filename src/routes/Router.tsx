@@ -5,9 +5,9 @@ import {PostsPage} from "../pages/PostsPage.tsx";
 import {CommentsPage} from "../pages/CommentsPage.tsx";
 import {ComplexPage} from "../pages/ComplexPage.tsx";
 ///////////створюємо роути для навігації на потрібні сторінки
-export const Router = createBrowserRouter(
-    [{path:'/',element:<MainLayout/>,
-    children:[{path:'users',element:<UsersPage/>},
+export const Router = createBrowserRouter(//////////створюємо
+    [{path:'/',element:<MainLayout/>,////////////дефолтне посилання
+    children:[{path:'users',element:<UsersPage/>},////////////перехід на сторінки
         {path:'posts',element:<PostsPage/>},
         {path:'comments',element:<CommentsPage/>},
         {path:'complex',element:<ComplexPage/>}

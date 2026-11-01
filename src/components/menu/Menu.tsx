@@ -2,7 +2,7 @@ import {Link, Outlet} from "react-router";
 import './Menu.css'
 
 export const Menu = () => {
-    return (///компонентт з навігаційним меню
+    return (///компонент з навігаційним меню
         <div className={'main-menu'}>
         <ul>
             <li><Link to={'/users'}>Users</Link></li>
