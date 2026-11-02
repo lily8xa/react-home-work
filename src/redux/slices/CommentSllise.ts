@@ -1,22 +1,19 @@
 import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolkit";
 import type {CommentType} from "../../models/CommentType.ts";
 import {getAll} from "../../services/api.servise.ts";
-////////////////////////////////
-////////////////////////////////////детальний аналогічний опис в файлі UserSlice.ts///////////////////////////
-//////////////////////////////////////////////////////////////////////////////
+
 type CommentSliceType={//тип для дефолтного значення з
-    comments:CommentType[]
+    comments:CommentType[]////масив з коментарями
 }
 //////////функція завантаження даних createAsyncThunk який обробляє успішне і не успішне завантаження, також підтримує аргумент який можна використовувати для отримання певних даних(_)
 const loadComments=createAsyncThunk<CommentType[]>(
     'commentSlice/loadComments',//Це унікальне ім'я екшену, префікс
     async (_,thuncApi)=>{ ////////(_)-аргумент який дає можливість відслідковувати(прик.id:string) і керувати. thuncAPI--•об'єкт, який надає доступ до корисних інструментів Redux всередині танка. Завдяки йому ми можемо вручну керувати результатом запиту, викликати інші екшени (thunkAPI.dispatch) або почитати поточний стан сховища (thunkAPI.getState()).
         try {
-            const comments=await getAll<CommentType[]>('/comments')//////////використовуємо функцію для торимання данних з АПІ,
+            const comments=await getAll<CommentType[]>('/comments')//////////використовуємо функцію для отримання даних з АПІ,
             ////почекаємо поки відпрацює await
             console.log(comments)
             return thuncApi.fulfillWithValue(comments)///повертаємо успішно виконаний масив юзерів. fulfillWithValue-метод що передає успішні дані
-
 
         }catch (e){////якщо щось пішло не так
             console.log(e)
@@ -27,7 +24,6 @@ const loadComments=createAsyncThunk<CommentType[]>(
 )
 const initialState:CommentSliceType={comments:[]}//встановлюємо дефолтне значення з типом нашим і пустий масив, якщо не завантажено нічого
 ////створюємо кімнату зі слайсами---createSlice
-
 export const commentSlice=createSlice({///////треба її прописати в Store
     name:'commentSlice',////префікс для типу екшена
     initialState:initialState,///початковий стан нашого обєкту

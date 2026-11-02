@@ -6,7 +6,7 @@ import {commentSlice} from "./slices/CommentSllise.ts";
 export const store=configureStore(//////////////створюємо сховище
     {
         reducer://////////////опції сховища Редусер — це звичайна функція, яка вирішує, ЯК саме зміняться дані у сховищі після того, як туди прилетить якась команда (action).
-            {userSlice:userSlice.reducer,///////кімната користувачів. яка дія reducer таємниця для мене
+            {userSlice:userSlice.reducer,///////кімната користувачів.reducer---функція приймає поточний стан (state) та команду (action), опрацьовує їх і повертає абсолютно новий стан.
                 postSlice:postSlice.reducer,////////////постів
                 commentSlice:commentSlice.reducer/////////////коментарів--доступ до нього через власний хук useAppSelector
             }

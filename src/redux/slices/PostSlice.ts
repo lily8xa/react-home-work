@@ -3,9 +3,6 @@ import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolki
 import {getAll} from "../../services/api.servise.ts";
 
 
-////////////////////////////////
-////////////////////////////////////детальний аналогічний опис в файлі UserSlice.ts///////////////////////////
-//////////////////////////////////////////////////////////////////////////////
 
 type PostSliceType={/////тип для дефолтного значення з масивом
     posts:PostType[]////масив з постами

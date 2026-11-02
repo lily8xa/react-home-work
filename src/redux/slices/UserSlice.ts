@@ -2,7 +2,7 @@ import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolki
 import type {UserType} from "../../models/UserType.ts";
 import {getAll} from "../../services/api.servise.ts";
 type UserSliceType={/////////////////тип для дефолтного значення з масивом користувачів
-    users:UserType[];
+    users:UserType[];////масив з юзерами
 }
 const initialUserSliceState:UserSliceType={users:[]}///////////////встановлюємо дефолтне значення з типом нашим і пустий масив, якщо не завантажено нічого
 //////////функція завантаження даних createAsyncThunk який обробляє успішне і не успішне завантаження, також підтримує аргумент який можна використовувати для отримання певних даних(_)

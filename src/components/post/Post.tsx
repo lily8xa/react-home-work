@@ -4,7 +4,7 @@ import './Post.css'
 
 export const Post :FC<PostType> = ({userId,id,title}) => {
     ////компонент для відображення кожного поста
-    ////пропси {userId,id,title} для відображення в return назва поста та номер і назву
+    ////пропси {userId,id,title} для відображення в return назва поста, номер і назву
     return (
         <div className={'main-post'}>
             <h1>{userId}</h1>

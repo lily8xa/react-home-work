@@ -4,18 +4,20 @@ import {useEffect} from "react";
 import {postSliceAction} from "../redux/slices/PostSlice.ts";
 import {Post} from "../components/post/Post.tsx";
 
-///////////////////////////
-///////////////////////детальний опис на сторінці UsersPage ідентична цій//////////////////////////
-///////////////////////////
 
 export const PostsPage = () => {
-    const {posts}=useAppSelector(({postSlice})=>postSlice)
+    //// useAppSelector---наш власний хук для типізації сховища
+    const {posts}=useAppSelector(({postSlice}////////////деструкторизований стан нашого слайсу
+    )=>postSlice)
     console.log(posts)
-    const dispatch=useAppDispatch()
+    ///ми використовуємо наш хук для типізації useAppDispatch
+    const dispatch=useAppDispatch()////////////викликаємо хук, який повертає функцію відправки і записуємо в
+    ///результат у dispatch
     useEffect(() => {
-        dispatch(postSliceAction.loadPosts())
+        dispatch(postSliceAction.loadPosts())///////dispatch шукає дані які завантажуємо з сервера які тягнуться з кімнати в слайсі
     }, []);
     return (
-        <div>{posts.map(post=><Post key={post.id}{...post}/>)}</div>
+        <div>{posts.map(post=><Post key={post.id}{...post}/>)}</div>///перебираємо пости використовуючи компонент для виведення
+
     );
 };
